@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="key" onchange="star(this.value)">
+<p id="result"></p>
+<script>
+  let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+  let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+  function indexOf(key) {
+      for (let i = 0; i < star1.length; i++) {
+          if (key == star1[i]) return i;
+      }
+      return -1;
+  }
+  function star(word) {
+      let index = indexOf(word);
+      if (index==-1){
+          document.getElementById("result").innerText = "Moi ban nhap lai";
+      }
+      else {
+          document.getElementById("result").innerText
+              = star2[index];
+      }
+  }
+</script>
+</body>
+</html>
