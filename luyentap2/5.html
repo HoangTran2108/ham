@@ -6,24 +6,20 @@
 </head>
 <body>
 <script>
-  function sosanh (a,b,c){
-    if(a<b) {
-        if (a < c) {
-            alert(a + " là số lớn nhỏ nhất")
-        } else {
-            alert(c + " là số nhỏ nhất")
+    let num1=+prompt("Nhập vào số a");
+    let num2=+prompt("Nhập vào số b");
+    let num3=+prompt("Nhập vào số c");
+  function sosanh (newArr) {
+    let min=newArr[0];
+    for(let i=0; i<newArr.length; i++){
+        if (min>newArr[i]) {
+            min=newArr[i]
         }
-    }
-    else if(b<c){
-      alert(b + " là số nhỏ nhất")
-      } else {
-      alert(c + " là số nhỏ nhất")
-      }
+    }alert(min)
   }
-  let num1=+prompt("Nhập vào số a");
-  let num2=+prompt("Nhập vào số b");
-  let num3=+prompt("Nhập vào số c");
-  sosanh(num1,num2,num3)
+  let arr=[]
+    arr.push(num1,num2,num3)
+    sosanh(arr)
 </script>
 </body>
 </html>
